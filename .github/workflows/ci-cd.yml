@@ -3,7 +3,7 @@ name: Java CI/CD Pipeline
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -19,5 +19,5 @@ jobs:
           distribution: 'adopt'
 
       - name: Compile Java code
-        run: javac -d ./target ./src//*.java
+          javac -d ./target ./src/mon_projet_test/*.java ./src/junit.monprojet.test/*.java
 
