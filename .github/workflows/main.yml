@@ -20,7 +20,9 @@ jobs:
           distribution: 'adopt'
 
       - name: Compile Java code
-        run: javac -d ./target ./src/mon_projet_test/*.java
+        run: |
+          ls -R ./src
+          javac -d ./target ./src/mon_projet_test/**/*.java
 
   test:
     name: Test
