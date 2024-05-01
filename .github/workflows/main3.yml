@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Compile Java code
-        run: javac -d C:\Users\merihenebksh\eclipse-workspace-modeling\mon_projet_test
+        run: javac -d ./target/mon_projet_test
 
   test:
     name: Test
