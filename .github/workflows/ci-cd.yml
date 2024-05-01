@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-java@v2.5.0
         with:
           java-version: '17.0.9'
+          distribution: 'adopt'
 
       - name: Compile Java code
         run: javac -d ./target ./src//*.java
