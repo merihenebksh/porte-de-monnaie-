@@ -1,4 +1,4 @@
-name: Java CI/CD Pipeline
+trah jarbi hadha "name: Java CI/CD Pipeline
 
 on:
   push:
@@ -24,7 +24,12 @@ jobs:
       - name: Compile Java code
         run: |
           mkdir -p ./bin  # Target directory for compiled classes
-          javac -d ./bin -sourcepath ./src $(find ./src -name "*.java")
+          files=$(find ./eclipse-workspace-modeling/mon_projet_test/src -name "*.java")
+          if [ -z "$files" ]; then
+            echo "No Java files found"
+          else
+            javac -d ./bin -sourcepath ./eclipse-workspace-modeling/mon_projet_test/src $files
+          fi
 
       - name: Execute tests
         run: |
