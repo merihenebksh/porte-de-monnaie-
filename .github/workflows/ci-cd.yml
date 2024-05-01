@@ -15,7 +15,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
-          java-version: '17'
+          java-version: '17.0.9'
       - name: Compile Java code
         run: javac -d ./target ./src//*.java
 
@@ -29,7 +29,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
-          java-version: '17'
+          java-version: '17.0.9'
       - name: Run JUnit tests
         run: |
           java -cp ./target:./lib/* org.junit.runner.JUnitCore junit.monprojet.test.PorteMonnaieTest junit.monprojet.test.SommeArgentTest
