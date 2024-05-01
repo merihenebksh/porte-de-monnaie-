@@ -19,7 +19,9 @@ jobs:
           distribution: 'adopt'
 
       - name: Compile Java code
-        run: javac -d ./target ./src/mon_projet_test/*.java ./src/junit.monprojet.test/*.java
+        run: |
+          javac -d ./target ./src/mon_projet_test/*.java
+          javac -d ./target ./src/junit.monprojet.test/*.java
 
   test:
     name: Test
@@ -33,4 +35,6 @@ jobs:
         with:
           java-version: '17'
       - name: Run JUnit tests
-        run: java -cp ./target:./lib/* org.junit.runner.JUnitCore junit.monprojet.test.PorteMonnaieTest junit.monprojet.test.SommeArgentTest
+        run: |
+          java -cp ./target:./lib/* org.junit.runner.JUnitCore junit.monprojet.test.PorteMonnaieTest junit.monprojet.test.SommeArgentTest
+          
