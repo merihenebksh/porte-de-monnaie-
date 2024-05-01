@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Compile Java code
-        run: javac -d ./target ./src/mon_projet_test/*.java
+        run: javac -d ./target ./src/mon_projet_test/PorteMonnaie.java
 
   test:
     name: Test
