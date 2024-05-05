@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Compile Java code
-        run: javac -d ./target ./src/mon_projet_test/.java ./src/junit.monprojet.test/.java
+        run: javac -d ./target ./src/mon_projet_test/*.java ./src/junit/mon_projet_test/*.java
 
   test:
     name: Test
@@ -36,5 +36,4 @@ jobs:
           java-version: '17'
 
       - name: Run JUnit tests
-        run: |
-          java -cp ./target ./src/esm package lif fih test/*.java
+        run: java -cp ./target org.junit.runner.JUnitCore mon_projet_test.YourTestClassName
